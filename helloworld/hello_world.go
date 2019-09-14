@@ -3,7 +3,9 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Printf("hi")
+	numBytes, _ := fmt.Println("hi")
+	fmt.Println(numBytes)
+
 	foo()
 
 	fmt.Println("something else here")
@@ -14,6 +16,11 @@ func main() {
 		}
 
 	}
+	otherFoo(10, 20, 40)
+}
+
+func otherFoo(val ...int) {
+	fmt.Println(val)
 }
 
 func foo() {
