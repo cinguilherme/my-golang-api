@@ -7,6 +7,7 @@ import (
 )
 
 func TestEntry(t *testing.T) {
+	p("Hotel test class")
 	tp, arr := processEntry("regular:(mon),(tue),(sat)")
 
 	assert.Assert(t, tp == 2)
