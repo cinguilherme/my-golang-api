@@ -2,14 +2,24 @@ package main
 
 import (
 	"fmt"
+	s "strings"
 )
 
+var p = fmt.Println
+
 func main() {
-	fmt.Println("it begins")
+	p("it begins")
 }
 
 func processEntry(entry string) (int, []string) {
-	dates := []string{"mon", "tue"}
-	constumerType := 2
+	broken := s.Split(entry, ":")
+	costumer := broken[0]
+	dates := s.Split(s.Join(broken[1:], ""), ",")
+
+	constumerType := 1
+	if costumer == "regular" {
+		constumerType = 2
+	}
+
 	return constumerType, dates
 }

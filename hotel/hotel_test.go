@@ -1,12 +1,14 @@
 package main
 
 import (
-	"fmt"
 	"testing"
+
+	"gotest.tools/assert"
 )
 
 func TestEntry(t *testing.T) {
 	tp, arr := processEntry("regular:(mon),(tue),(sat)")
-	fmt.Println(tp, arr)
 
+	assert.Assert(t, tp == 2)
+	assert.Assert(t, len(arr) == 3)
 }
