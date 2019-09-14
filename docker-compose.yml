@@ -4,3 +4,5 @@ services:
   app:
     image: my-golang-api
     command: go run main.go
+    ports: 
+      - 8080:8080
