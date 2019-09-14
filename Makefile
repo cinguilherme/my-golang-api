@@ -6,3 +6,10 @@ run-dockerized:
 
 git-all:
 	git add . && git commit -m "all changes" && git push
+
+run:
+	docker-compose down
+	docker-compose up
+
+test:
+	docker-compose run app go test -v ./...
