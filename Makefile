@@ -13,3 +13,6 @@ run:
 
 test:
 	docker-compose run app go test -v ./...
+
+bomb:
+	make git-all && git push heroku master
