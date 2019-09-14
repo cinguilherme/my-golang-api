@@ -1,0 +1,3 @@
+mode: set
+com.gcc/hotel/hotel.go:7.13,9.2 1 0
+com.gcc/hotel/hotel.go:11.49,15.2 3 1
