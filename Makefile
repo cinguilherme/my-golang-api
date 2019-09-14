@@ -1,8 +1,11 @@
+run-local:
+	go run main.go
+
 build-image:
 	docker build . -t my-golang-api
 
 run-dockerized:
-	docker run -p 8080:8080 my-goland-api
+	docker run -p 8080:8080 my-golang-api
 
 git-all:
 	git add . && git commit -m "all changes" && git push
