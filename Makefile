@@ -8,7 +8,7 @@ run-dockerized:
 	docker run -p 8080:8080 my-golang-api
 
 git-all:
-	git add . && git commit -m "all changes" && git push
+	git add . && git commit -m "all changes WIP" && git push
 
 run:
 	docker-compose down
@@ -19,6 +19,9 @@ test:
 
 pull:
 	git pull
+
+wip:
+	make git-all
 
 bomb:
 	make git-all && git push heroku master
