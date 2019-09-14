@@ -5,4 +5,4 @@ build:
     - go
 
 run:
-  web: my-golang-api
+  web: go-lang-api-document
