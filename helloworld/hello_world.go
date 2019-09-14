@@ -16,11 +16,6 @@ func main() {
 	}
 }
 
-func build_my_string() {
-	str := "here is my string beeing built"
-	return str
-}
-
 func foo() {
 	fmt.Println("I`m foo")
 }
