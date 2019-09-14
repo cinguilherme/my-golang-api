@@ -5,4 +5,4 @@ run-dockerized:
 	docker run -p 8080:8080 my-goland-api
 
 git-all:
-	git add . && git commit -m "all changes"
+	git add . && git commit -m "all changes" && git push
