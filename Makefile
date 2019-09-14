@@ -24,4 +24,4 @@ wip:
 	make git-all
 
 bomb:
-	make git-all && git push heroku master
+	make git-all
