@@ -6,6 +6,10 @@ import (
 	"gotest.tools/assert"
 )
 
+func TestResolver(t *testing.T) {
+
+}
+
 func TestProcessEntry(t *testing.T) {
 	p("Hotel test class")
 	tp, arr := processEntry("regular:(mon),(tue),(sat)")

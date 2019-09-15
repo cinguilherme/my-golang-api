@@ -22,9 +22,19 @@ var arrHotels Hotels = Hotels{
 	Hotel{Name: "treelake", WendFactor: 1.1, BasicTarif: 22},
 }
 
+var fullEntry = "regular:(mon),(tue)"
+
 func main() {
 	p("it begins")
+	winner := resolver(fullEntry)
+	p(winner.Name)
+}
 
+func resolver(entry string) Hotel {
+	var _, arr = processEntry(entry)
+	var arrBool = buildSimplifiedWeekDayBoolArray(arr)
+	var cheapest = getCheapest(arrHotels, arrBool)
+	return cheapest
 }
 
 func processEntry(entry string) (int, []string) {
