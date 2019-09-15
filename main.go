@@ -30,9 +30,16 @@ func homePage(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "HomePage endpoint Hit")
 }
 
+func hotels(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "hotels endpoint Hit")
+
+	json.NewEncoder(w).Encode("wip")
+}
+
 func handleRequest() {
 	http.HandleFunc("/", homePage)
 	http.HandleFunc("/articles", allArticles)
+	http.HandleFunc("/hotels", hotels)
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
 
