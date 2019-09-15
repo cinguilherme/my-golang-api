@@ -48,5 +48,6 @@ func TestGetCheapest(t *testing.T) {
 		Hotel{Name: "secondHotel", WendFactor: 1.4, BasicTarif: 8.0},
 	}
 	ret := getCheapest(hotelsTest, []bool{false, false, true})
-	p(ret)
+
+	assert.Equal(t, "secondHotel", ret.Name)
 }

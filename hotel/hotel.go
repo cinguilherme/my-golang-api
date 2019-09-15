@@ -64,8 +64,12 @@ func getPriceForHotel(hotel Hotel, arrDAys []bool) float32 {
 
 func getCheapest(hotels Hotels, arrDays []bool) Hotel {
 	var cheapest Hotel = hotels[0]
+	var currentPrice = getPriceForHotel(cheapest, arrDays)
 	for i := range hotels {
-		getPriceForHotel(hotels[i], arrDays)
+		val := getPriceForHotel(hotels[i], arrDays)
+		if val < currentPrice {
+			cheapest = hotels[i]
+		}
 	}
 
 	return cheapest
