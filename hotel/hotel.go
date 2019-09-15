@@ -7,12 +7,14 @@ import (
 
 var p = fmt.Println
 
+//Hotel basic strut
 type Hotel struct {
 	Name       string
 	WendFactor float32
 	BasicTarif float32
 }
 
+//Hotels array struyt
 type Hotels []Hotel
 
 var arrHotels Hotels = Hotels{
