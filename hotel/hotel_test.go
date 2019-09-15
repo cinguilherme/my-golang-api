@@ -22,3 +22,22 @@ func TestBuildSimplifiedWeekDayBoolArray(t *testing.T) {
 	assert.Assert(t, len(boolArray) == 2)
 	assert.DeepEqual(t, boolArray, []bool{true, false})
 }
+
+func TestGetPriceForHotel(t *testing.T) {
+	var hotel Hotel = Hotel{
+		Name: "testHotel", WendFactor: 1.5, BasicTarif: 10.0,
+	}
+	var price float32 = getPriceForHotel(
+		hotel, []bool{true, true, false})
+	assert.Assert(t, price == 40.0)
+}
+
+func TestGetPriceForHotelOther(t *testing.T) {
+	var hotel Hotel = Hotel{
+		Name: "testHotel", WendFactor: 1.1, BasicTarif: 10.0,
+	}
+	var price float32 = getPriceForHotel(
+		hotel, []bool{false, false})
+	var expected float32 = 20.0
+	assert.Equal(t, price, expected)
+}
