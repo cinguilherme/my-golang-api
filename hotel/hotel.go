@@ -23,3 +23,19 @@ func processEntry(entry string) (int, []string) {
 
 	return constumerType, dates
 }
+
+func buildSimplifiedWeekDayBoolArray(list []string) []bool {
+	//zp := regexp.MustCompile(`(z+)`)
+	var ret []bool
+
+	for i := range list {
+
+		if s.Contains("(sun)(sat)", list[i]) {
+			ret = append(ret, true)
+		} else {
+			ret = append(ret, false)
+		}
+	}
+
+	return ret
+}
