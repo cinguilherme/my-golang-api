@@ -41,3 +41,12 @@ func TestGetPriceForHotelOther(t *testing.T) {
 	var expected float32 = 20.0
 	assert.Equal(t, price, expected)
 }
+
+func TestGetCheapest(t *testing.T) {
+	var hotelsTest Hotels = []Hotel{
+		Hotel{Name: "firstHotel", WendFactor: 1.1, BasicTarif: 12.0},
+		Hotel{Name: "secondHotel", WendFactor: 1.4, BasicTarif: 8.0},
+	}
+	ret := getCheapest(hotelsTest, []bool{false, false, true})
+	p(ret)
+}
